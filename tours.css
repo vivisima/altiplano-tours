@@ -1,0 +1,266 @@
+/* ============================================================
+   tours.css — styles specific to tours.html
+   Loaded in addition to style.css
+   ============================================================ */
+
+/* ---- Page header (replaces the hero on inner pages) ------- */
+.page-header {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  padding: 64px 40px 56px;
+  text-align: center;
+}
+
+.page-header-title {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.page-header-subtitle {
+  font-size: 17px;
+  color: var(--color-text-muted);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* ---- Active nav link -------------------------------------- */
+.nav-active {
+  color: var(--color-accent) !important;
+  font-weight: 500;
+}
+
+/* ---- Filter bar ------------------------------------------- */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  position: sticky;
+  top: 64px;   /* sits just below the nav */
+  z-index: 90;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  border-radius: 999px;    /* pill shape */
+  padding: 7px 18px;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+.filter-btn:hover {
+  color: var(--color-text);
+  border-color: var(--color-text-muted);
+}
+
+.filter-btn.active {
+  background: var(--color-accent);
+  color: #fff;
+  border-color: var(--color-accent);
+}
+
+/* ---- Tours list ------------------------------------------- */
+.tours-list {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 40px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ---- Individual tour card (horizontal layout) ------------- */
+.tour-detail-card {
+  display: grid;
+  grid-template-columns: 380px 1fr;  /* fixed image width, flexible content */
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+  transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.tour-detail-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+/* Image side */
+.tour-detail-image {
+  position: relative;   /* so the tag badge can be positioned inside */
+}
+
+.tour-detail-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+.tour-detail-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--color-accent);
+  padding: 5px 12px;
+  border-radius: 4px;
+}
+
+/* Content side */
+.tour-detail-body {
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Small metadata row: duration · group size · region */
+.tour-detail-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.meta-item strong {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.tour-detail-title {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.tour-detail-desc {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* What's included bullet list */
+.tour-detail-includes {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 4px;
+}
+
+.tour-detail-includes li {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  padding-left: 18px;
+  position: relative;
+}
+
+/* Custom bullet: a small terracotta dot */
+.tour-detail-includes li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.6;
+}
+
+/* Price + button row at the bottom */
+.tour-detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;  /* pushes footer to the bottom of the card */
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+.tour-detail-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.price-from {
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+
+.price-amount {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.price-per {
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+
+/* ---- Responsive ------------------------------------------- */
+
+/* Tablet: stack image on top of content */
+@media (max-width: 860px) {
+  .tour-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .tour-detail-image img {
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  .tour-detail-body {
+    padding: 28px 28px;
+  }
+
+  .filter-bar {
+    padding: 20px 24px;
+    top: 64px;
+  }
+
+  .tours-list {
+    padding: 40px 24px 64px;
+  }
+
+  .page-header {
+    padding: 48px 24px 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .tour-detail-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .filter-bar { gap: 6px; }
+  .filter-btn { font-size: 12px; padding: 6px 14px; }
+}

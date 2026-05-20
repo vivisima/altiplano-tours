@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Tours — Altiplano Tours Bolivia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tours.css">
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav">
+    <a href="index.html" class="nav-logo">Altiplano<span>Tours</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#destinations">Destinations</a></li>
+      <li><a href="tours.html" class="nav-active">Tours</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Book a tour</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===================== PAGE HEADER ===================== -->
+  <header class="page-header">
+    <div class="page-header-content">
+      <p class="section-eyebrow">What we offer</p>
+      <h1 class="page-header-title">All tours</h1>
+      <p class="page-header-subtitle">From salt flats to rainforest — every tour is led by local expert guides and designed for small groups.</p>
+    </div>
+  </header>
+
+  <!-- ===================== FILTER BAR ===================== -->
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All tours</button>
+    <button class="filter-btn" data-filter="adventure">Adventure</button>
+    <button class="filter-btn" data-filter="culture">Culture</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="hiking">Hiking</button>
+  </div>
+
+  <!-- ===================== TOURS LIST ===================== -->
+  <main class="tours-list">
+
+    <!-- Tour 1 -->
+    <article class="tour-detail-card" data-category="adventure">
+      <div class="tour-detail-image">
+        <img src="https://images.unsplash.com/photo-1531761535209-180857e963b9?w=700&q=80" alt="Salar de Uyuni">
+        <span class="tour-detail-tag">Adventure</span>
+      </div>
+      <div class="tour-detail-body">
+        <div class="tour-detail-meta">
+          <span class="meta-item"><strong>3</strong> days</span>
+          <span class="meta-item"><strong>2–12</strong> people</span>
+          <span class="meta-item">Potosí Dept.</span>
+        </div>
+        <h2 class="tour-detail-title">Uyuni Salt Flat Expedition</h2>
+        <p class="tour-detail-desc">Cross the world's largest salt flat — 10,000 km² of blinding white crust at 3,656 m altitude. Visit the steaming Sol de Mañana geysers, swim in the Polques hot springs, and marvel at the flamingo-filled Laguna Colorada. At night, camp under skies with zero light pollution.</p>
+        <ul class="tour-detail-includes">
+          <li>Transport from Uyuni town</li>
+          <li>English-speaking guide</li>
+          <li>All meals during the tour</li>
+          <li>Accommodation (lodge + camping)</li>
+          <li>National park entry fees</li>
+        </ul>
+        <div class="tour-detail-footer">
+          <div class="tour-detail-price">
+            <span class="price-from">From</span>
+            <span class="price-amount">$320</span>
+            <span class="price-per">per person</span>
+          </div>
+          <a href="#enquiry" class="btn btn-primary" onclick="setTour('Uyuni Salt Flat Expedition')">Book this tour</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tour 2 -->
+    <article class="tour-detail-card" data-category="culture">
+      <div class="tour-detail-image">
+        <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=700&q=80" alt="Lake Titicaca">
+        <span class="tour-detail-tag">Culture</span>
+      </div>
+      <div class="tour-detail-body">
+        <div class="tour-detail-meta">
+          <span class="meta-item"><strong>2</strong> days</span>
+          <span class="meta-item"><strong>2–10</strong> people</span>
+          <span class="meta-item">La Paz Dept.</span>
+        </div>
+        <h2 class="tour-detail-title">Tiwanaku &amp; Titicaca</h2>
+        <p class="tour-detail-desc">Begin at Tiwanaku, a UNESCO World Heritage pre-Inca city that flourished over 1,500 years ago — walk among its monolithic stone gateways and sunken temple. Then head to Lake Titicaca, the world's highest navigable lake, and sail to Isla del Sol and the traditional Uros floating reed islands.</p>
+        <ul class="tour-detail-includes">
+          <li>Private transport throughout</li>
+          <li>Expert archaeologist guide at Tiwanaku</li>
+          <li>Boat crossing on Lake Titicaca</li>
+          <li>Overnight on Isla del Sol (guesthouse)</li>
+          <li>Breakfast and dinner included</li>
+        </ul>
+        <div class="tour-detail-footer">
+          <div class="tour-detail-price">
+            <span class="price-from">From</span>
+            <span class="price-amount">$180</span>
+            <span class="price-per">per person</span>
+          </div>
+          <a href="#enquiry" class="btn btn-primary" onclick="setTour('Tiwanaku & Titicaca')">Book this tour</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tour 3 -->
+    <article class="tour-detail-card" data-category="nature">
+      <div class="tour-detail-image">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Amazon Basin Bolivia">
+        <span class="tour-detail-tag">Nature</span>
+      </div>
+      <div class="tour-detail-body">
+        <div class="tour-detail-meta">
+          <span class="meta-item"><strong>5</strong> days</span>
+          <span class="meta-item"><strong>2–8</strong> people</span>
+          <span class="meta-item">Beni Dept.</span>
+        </div>
+        <h2 class="tour-detail-title">Amazon Wildlife Trek</h2>
+        <p class="tour-detail-desc">Venture deep into the Bolivian Amazon — one of the most biodiverse regions on earth. Spot caimans, pink river dolphins, giant otters, and hundreds of bird species with an expert naturalist guide. Night walks, dugout canoe trips, and jungle camp stays bring you face to face with a living rainforest.</p>
+        <ul class="tour-detail-includes">
+          <li>Return flights La Paz → Rurrenabaque</li>
+          <li>Naturalist guide (English/Spanish)</li>
+          <li>All meals and accommodation</li>
+          <li>Canoe excursions and night walks</li>
+          <li>Madidi National Park entry fee</li>
+        </ul>
+        <div class="tour-detail-footer">
+          <div class="tour-detail-price">
+            <span class="price-from">From</span>
+            <span class="price-amount">$580</span>
+            <span class="price-per">per person</span>
+          </div>
+          <a href="#enquiry" class="btn btn-primary" onclick="setTour('Amazon Wildlife Trek')">Book this tour</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tour 4 -->
+    <article class="tour-detail-card" data-category="hiking">
+      <div class="tour-detail-image">
+        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=700&q=80" alt="Cordillera Real Bolivia">
+        <span class="tour-detail-tag">Hiking</span>
+      </div>
+      <div class="tour-detail-body">
+        <div class="tour-detail-meta">
+          <span class="meta-item"><strong>6</strong> days</span>
+          <span class="meta-item"><strong>2–10</strong> people</span>
+          <span class="meta-item">La Paz Dept.</span>
+        </div>
+        <h2 class="tour-detail-title">Cordillera Real Trek</h2>
+        <p class="tour-detail-desc">A classic multi-day high-altitude traverse of Bolivia's most dramatic mountain range. Cross glaciated passes above 5,000 m, descend into lush cloud forest valleys, and follow ancient Inca trade routes. Suitable for fit hikers with some trekking experience — acclimatization days in La Paz are recommended before departure.</p>
+        <ul class="tour-detail-includes">
+          <li>Experienced mountain guide</li>
+          <li>Mule support for gear</li>
+          <li>All camping equipment provided</li>
+          <li>All meals on the trail</li>
+          <li>Emergency satellite communication device</li>
+        </ul>
+        <div class="tour-detail-footer">
+          <div class="tour-detail-price">
+            <span class="price-from">From</span>
+            <span class="price-amount">$740</span>
+            <span class="price-per">per person</span>
+          </div>
+          <a href="#enquiry" class="btn btn-primary" onclick="setTour('Cordillera Real Trek')">Book this tour</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tour 5 -->
+    <article class="tour-detail-card" data-category="culture">
+      <div class="tour-detail-image">
+        <img src="https://images.unsplash.com/photo-1585208798174-6cedd86e019a?w=700&q=80" alt="La Paz city tour">
+        <span class="tour-detail-tag">Culture</span>
+      </div>
+      <div class="tour-detail-body">
+        <div class="tour-detail-meta">
+          <span class="meta-item"><strong>1</strong> day</span>
+          <span class="meta-item"><strong>2–15</strong> people</span>
+          <span class="meta-item">La Paz</span>
+        </div>
+        <h2 class="tour-detail-title">La Paz City &amp; Valle de la Luna</h2>
+        <p class="tour-detail-desc">Explore the world's highest administrative capital — its bustling Witches' Market, colonial architecture, and panoramic cable car (Mi Teleférico). In the afternoon, visit Valle de la Luna, where millennia of erosion have sculpted a dreamlike landscape of clay spires and labyrinthine canyons just 10 km from the city centre.</p>
+        <ul class="tour-detail-includes">
+          <li>Local guide for the full day</li>
+          <li>Cable car tickets included</li>
+          <li>Traditional lunch at a local restaurant</li>
+          <li>Valle de la Luna entry fee</li>
+          <li>Hotel pickup and drop-off</li>
+        </ul>
+        <div class="tour-detail-footer">
+          <div class="tour-detail-price">
+            <span class="price-from">From</span>
+            <span class="price-amount">$65</span>
+            <span class="price-per">per person</span>
+          </div>
+          <a href="#enquiry" class="btn btn-primary" onclick="setTour('La Paz City & Valle de la Luna')">Book this tour</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- Tour 6 -->
+    <article class="tour-detail-card" data-category="adventure">
+      <div class="tour-detail-image">
+        <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?w=700&q=80" alt="Death Road cycling Bolivia">
+        <span class="tour-detail-tag">Adventure</span>
+      </div>
+      <div class="tour-detail-body">
+        <div class="tour-detail-meta">
+          <span class="meta-item"><strong>1</strong> day</span>
+          <span class="meta-item"><strong>2–16</strong> people</span>
+          <span class="meta-item">La Paz Dept.</span>
+        </div>
+        <h2 class="tour-detail-title">Death Road Mountain Bike</h2>
+        <p class="tour-detail-desc">Descend the legendary North Yungas Road — once dubbed the world's most dangerous road — on a high-quality mountain bike. Starting at 4,700 m and plunging 3,500 m through cloud forest to subtropical valley, the 64 km ride is a full-day adrenaline experience with stunning scenery at every turn.</p>
+        <ul class="tour-detail-includes">
+          <li>Full-suspension mountain bike + helmet</li>
+          <li>Professional safety briefing and guide</li>
+          <li>Transport back to La Paz</li>
+          <li>Lunch and drinks at the finish line</li>
+          <li>Action photos included</li>
+        </ul>
+        <div class="tour-detail-footer">
+          <div class="tour-detail-price">
+            <span class="price-from">From</span>
+            <span class="price-amount">$95</span>
+            <span class="price-per">per person</span>
+          </div>
+          <a href="#enquiry" class="btn btn-primary" onclick="setTour('Death Road Mountain Bike')">Book this tour</a>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- ===================== ENQUIRY FORM ===================== -->
+  <section class="section section--alt" id="enquiry">
+    <div class="section-header">
+      <p class="section-eyebrow">Ready to go?</p>
+      <h2 class="section-title">Book or enquire</h2>
+      <p class="section-subtitle">Fill in the form and we'll get back to you within 24 hours with availability and details.</p>
+    </div>
+    <form class="contact-form" id="enquiry-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="e.g. María García">
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="tour">Tour of interest</label>
+          <select id="tour-select" name="tour">
+            <option value="">— Select a tour —</option>
+            <option>Uyuni Salt Flat Expedition</option>
+            <option>Tiwanaku &amp; Titicaca</option>
+            <option>Amazon Wildlife Trek</option>
+            <option>Cordillera Real Trek</option>
+            <option>La Paz City &amp; Valle de la Luna</option>
+            <option>Death Road Mountain Bike</option>
+            <option>Custom itinerary</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="groupsize">Group size</label>
+          <select id="groupsize" name="groupsize">
+            <option value="">— How many people? —</option>
+            <option>1–2 people</option>
+            <option>3–5 people</option>
+            <option>6–10 people</option>
+            <option>10+ people</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Dates &amp; message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Preferred travel dates, any special requirements or questions..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send enquiry</button>
+    </form>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <p class="nav-logo">Altiplano<span>Tours</span></p>
+        <p>La Paz, Bolivia<br>contact@altiplano-tours.com</p>
+      </div>
+      <nav class="footer-nav">
+        <h4>Explore</h4>
+        <a href="index.html#destinations">Destinations</a>
+        <a href="tours.html">Tours</a>
+        <a href="index.html#about">About us</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <nav class="footer-nav">
+        <h4>Tours</h4>
+        <a href="tours.html">Uyuni Salt Flat</a>
+        <a href="tours.html">Tiwanaku &amp; Titicaca</a>
+        <a href="tours.html">Amazon Wildlife</a>
+        <a href="tours.html">Cordillera Real</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Altiplano Tours. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script>
+    // --- Filter buttons ---
+    // When a filter button is clicked, show only matching tour cards
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const tourCards  = document.querySelectorAll('.tour-detail-card');
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        // Mark which button is active
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        var filter = btn.getAttribute('data-filter');
+
+        tourCards.forEach(function(card) {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'grid';   // show
+          } else {
+            card.style.display = 'none';   // hide
+          }
+        });
+      });
+    });
+
+    // --- Pre-select tour in the form when "Book this tour" is clicked ---
+    function setTour(tourName) {
+      var select = document.getElementById('tour-select');
+      for (var i = 0; i < select.options.length; i++) {
+        if (select.options[i].text === tourName) {
+          select.selectedIndex = i;
+          break;
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
